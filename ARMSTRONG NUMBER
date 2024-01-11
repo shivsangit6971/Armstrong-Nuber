@@ -1,0 +1,36 @@
+//it is armstrong number programm
+
+import java.util.Scanner;
+class Armstrong{
+public static void main(String[]args){
+Scanner sc=new Scanner(System.in);
+int j=sc.nextInt();
+int k=sc.nextInt();
+for(j=1;j<=k;j++){
+
+int sum=0;
+int a1=j;
+int a2=j;
+int count=0;
+while(a1>0){
+count++;
+a1=a1/10;
+}
+while(a2>0){
+int rem=a2%10;
+int res=1;
+for(int i=1;i<=count;i++){
+res=res*rem;
+}
+sum=sum+res;
+a2=a2/10;
+}
+if(sum==j){
+System.out.println(j+" :it is armstrong");
+}
+else{
+System.out.println(j+" :it is not armstrong");
+}
+}
+}
+}
